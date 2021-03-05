@@ -1,0 +1,98 @@
+<Activity mc:Ignorable="sap" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="398,988" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="15">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="358,1174">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap:VirtualizedContainerService.HintSize="336,1050">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:GenericValue" Name="firstname" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="lastname" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="DOB" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="designation" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="gender" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your First Name" Title="Personal Detail">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[firstname]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your Lastname" Title="Personal detail">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[lastname]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your Date of Birth" Title="DOB">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[DOB]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your Designation" Title="Designation">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[designation]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:InputDialog Options="{x:Null}" Result="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your Mobile number" Title="Mobile no" />
+      <ui:InputDialog DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="314,92" IsPassword="False" Label="Enter your Gender" Options="[{&quot;Male&quot;,&quot;Female&quot;}]" Title="Gender">
+        <ui:InputDialog.Result>
+          <OutArgument x:TypeArguments="ui:GenericValue">[gender]</OutArgument>
+        </ui:InputDialog.Result>
+      </ui:InputDialog>
+      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Text="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'editable text'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" SendWindowMessages="False" SimulateType="False">
+        <ui:TypeInto.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="936175e959c516238cfc2274622be4b2" Selector="&lt;wnd app='firefox.exe' cls='MozillaWindowClass' title='HR On-Boarding Process Form – ExcelCult — Mozilla Firefox' /&gt;&lt;ctrl name='HR On-Boarding Process Form – ExcelCult — Mozilla Firefox' role='application' /&gt;&lt;ctrl name='HR On-Boarding Process Form – ExcelCult' role='document' /&gt;&lt;ctrl name='Personal Details' role='grouping' /&gt;&lt;ctrl idx='1' role='editable text' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:TypeInto.Target>
+      </ui:TypeInto>
+    </Sequence>
+  </Sequence>
+</Activity>
